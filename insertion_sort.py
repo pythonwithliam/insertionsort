@@ -68,3 +68,22 @@ def binary_insertion_sort(arr):
         arr[:] = arr[:floor] + [key] + arr[ceiling:i] + arr[i + 1:]
 
     return arr
+
+l=[]
+n=int(input("Enter the size of array"))
+for i in range(n):
+    l.append(int(input()))
+x=int(input("Choose\n1 for Iterative\n2 for Recursive\n3 for Binary"))
+while 1:
+    if x==1:
+        print(iterative_insertion_sort(l))
+        break
+    if x==2:
+        print(recursive_insertion_sort(l,n))
+        break
+    if x==3:
+        print(binary_insertion_sort(l))
+        break
+    else:
+        print("Re enter the choice:")
+        x=int(input("\nChoose\n1 for Iterative\n2 for Recursive\n3 for Binary\n"))
